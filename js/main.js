@@ -3,7 +3,7 @@ let userAge;
 let travelKm;
 let ticketPrice;
 
-// Initialized discount rates 
+// Initialized discount rates.
 const youngDiscount = 0.15; // for < 18yo.
 const elderDiscount = 0.35; // for >= 65yo.
 
