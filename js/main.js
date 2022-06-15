@@ -50,11 +50,10 @@ checkPriceButton.addEventListener('click', function(){
         document.getElementById("passenger-ticket-price").innerHTML = ticketPrice.toFixed(2) + "€";
         document.getElementById("carriage-number").innerHTML = carriageNumber;
         document.getElementById("passenger-ticket-num").innerHTML = "BF" + ticketNumber;
+        // Show ticket
         document.getElementById("passenger-ticket").classList.add("d-block");
         document.getElementById("passenger-ticket").classList.remove("d-none");
         
-        // Return the final ticket price (print in console)
-        // console.log(`Il prezzo del tuo biglietto è pari a: ${ticketPrice.toFixed(2)}€`)
     }
 
 })
@@ -64,8 +63,8 @@ clearFormButton.addEventListener('click', function(){
     document.getElementById('user-name').value = "";
     document.getElementById('user-age').value = "";
     document.getElementById('travel-km').value = "";
+    // Hide ticket
     document.getElementById("passenger-ticket").classList.remove("d-block");
     document.getElementById("passenger-ticket").classList.add("d-none");
-    // TODO Rinascondere il biglietto quando si preme "annulla"
 })
 
