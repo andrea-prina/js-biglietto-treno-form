@@ -1,4 +1,5 @@
-// Define variables to contain user age, distance to travel (in km) and final ticket price
+// Define variables to contain user name & age, distance to travel (in km) and final ticket price
+let userName;
 let userAge;
 let travelKm;
 let ticketPrice;
@@ -8,16 +9,18 @@ const youngDiscount = 0.15; // for < 18yo.
 const elderDiscount = 0.35; // for >= 65yo.
 
 // Initialize button element to submit the data and get the price
-const checkPriceButton = document.getElementById("price-button");
+const checkPriceButton = document.getElementById("generate-price-b");
 
+// Generate ticket price by pressing "Genera" button after inputting the data
 checkPriceButton.addEventListener('click', function(){
     // Get the data from the input elements in the DOM
+    userName = parseInt(document.getElementById('user-name').value);
     userAge = parseInt(document.getElementById('user-age').value);
     travelKm = parseInt(document.getElementById('travel-km').value);
 
     // Check if the number inputted by the user is > 0 (otherwise it won't be valid for calculate the price)
     // There is no need to check if it's a number because the input tag is has the "number" type
-    if (userAge < 0 || travelKm < 0) {
+    if (userAge < 0 || isNaN(userAge) || travelKm < 0 || isNaN(travelKm)) {
         console.log("Impossibile calcolare prezzo - i dati inseriti non sono corretti")
     } else {
 

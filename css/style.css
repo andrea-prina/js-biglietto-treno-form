@@ -1,0 +1,17 @@
+:root {
+    --main-color1: #B91450;
+}
+
+body {
+    background-color: var(--main-color1);
+}
+
+h5 {
+    color: var(--main-color1);
+}
+
+.ms_bor-col1 {
+    border: 1px solid var(--main-color1);
+}
+
+
