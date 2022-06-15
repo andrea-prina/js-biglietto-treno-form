@@ -8,8 +8,9 @@ let ticketPrice;
 const youngDiscount = 0.15; // for < 18yo.
 const elderDiscount = 0.35; // for >= 65yo.
 
-// Initialize button element to submit the data and get the price
+// Initialize buttons
 const checkPriceButton = document.getElementById("generate-price-b");
+const clearFormButton = document.getElementById("clear-form-b");
 
 // Generate ticket price by pressing "Genera" button after inputting the data
 checkPriceButton.addEventListener('click', function(){
@@ -42,4 +43,11 @@ checkPriceButton.addEventListener('click', function(){
 
 })
 
+// Delete inputted values if the user presses the button "Annulla"
+clearFormButton.addEventListener('click', function(){
+    document.getElementById('user-name').value = "";
+    document.getElementById('user-age').value = "";
+    document.getElementById('travel-km').value = "";
+
+})
 
