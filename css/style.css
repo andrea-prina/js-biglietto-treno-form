@@ -6,6 +6,7 @@ body {
     background-color: var(--main-color1);
 }
 
+
 h6 {
     color: var(--main-color1);
 }
@@ -13,5 +14,3 @@ h6 {
 .ms_bor-col1 {
     border: 1px solid var(--main-color1);
 }
-
-

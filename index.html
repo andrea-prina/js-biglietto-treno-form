@@ -9,63 +9,52 @@
     <title>Ferrovie Booleane</title>
 </head>
 <body>
-
-    <!-- <div><input type="number" placeholder="Inserisci la tua età" id="user-age"></div>
-    <div><input type="number" placeholder="Inserisci i km da percorrere" id="travel-km"></div>
-    <div><button class="btn btn-outline-secondary" type="button" id="price-button">Check price</button></div> -->
-
     
-    <h1 class="text-light text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+    <h1 class="text-light text-center mt-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
     
     <div class="container bg-light text-center pt-3 pb-3 rounded shadow">
         <div class="row">
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <h6>Nome e Cognome</h6>
                 <input class="ms_bor-col1" type="text" placeholder="" id="user-name">
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <h6>Età intestatario</h6>
                 <input class="ms_bor-col1" type="number" placeholder="" id="user-age">
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <h6>Distanza (km)</h6>
                 <input class="ms_bor-col1" type="number" placeholder="" id="travel-km">
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-4 offset-4">
-                <button class="btn btn-secondary" id="generate-price-b">Genera</button>
-                <button class="btn btn-secondary" id="clear-form-b">Annulla</button>
+                <button class="btn btn-secondary mb-3" id="generate-price-b">Genera</button>
+                <button class="btn btn-secondary mb-3" id="clear-form-b">Annulla</button>
             </div>
         </div>
     </div>
-
-
     <div class="d-none mt-5" id="passenger-ticket">
         <h1 class="text-light text-center">IL TUO BIGLIETTO</h1>
         <div class="container bg-light pt-3 pb-3">
             <div class="row">
-                <h4>DETTAGLIO PASSEGGERI</h4>
-            </div>
-            <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-md-4 mb-3">
                     <h5>NOME PASSEGGERO</h5>
                     <div id="passenger-name"></div>
-
                 </div>
-                <div class="col-2">
+                <div class="col-12 col-md-2 mb-3">
                     <h6>Offerta</h6>
                     <div>Biglietto Standard</div>
                 </div>
-                <div class="col-2">
+                <div class="col-12 col-md-2 mb-3">
                     <h6>Carrozza</h6>
                     <div id="carriage-number"></div>
                 </div>
-                <div class="col-2">
+                <div class="col-12 col-md-2 mb-3">
                     <h6>Codice CP</h6>
                     <div id="passenger-ticket-num"></div>
                 </div>
-                <div class="col-2">
+                <div class="col-12 col-md-2 mb-3">
                     <h6>Costo biglietto</h6>
                     <div id="passenger-ticket-price"></div>
                 </div>

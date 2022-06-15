@@ -64,7 +64,8 @@ clearFormButton.addEventListener('click', function(){
     document.getElementById('user-name').value = "";
     document.getElementById('user-age').value = "";
     document.getElementById('travel-km').value = "";
-
+    document.getElementById("passenger-ticket").classList.remove("d-block");
+    document.getElementById("passenger-ticket").classList.add("d-none");
     // TODO Rinascondere il biglietto quando si preme "annulla"
 })
 
