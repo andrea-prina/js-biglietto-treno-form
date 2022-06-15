@@ -15,7 +15,7 @@ const clearFormButton = document.getElementById("clear-form-b");
 // Generate ticket price by pressing "Genera" button after inputting the data
 checkPriceButton.addEventListener('click', function(){
     // Get the data from the input elements in the DOM
-    userName = parseInt(document.getElementById('user-name').value);
+    userName = document.getElementById('user-name').value;
     userAge = parseInt(document.getElementById('user-age').value);
     travelKm = parseInt(document.getElementById('travel-km').value);
 
@@ -37,8 +37,24 @@ checkPriceButton.addEventListener('click', function(){
             ticketPrice *= (1 - elderDiscount);
         }
 
+
+        // Calculate the carriage number (assuming all trains have 8 carriages)
+        const carriageNumber = Math.floor((Math.random() * 8) + 1);
+        console.log(carriageNumber);
+
+        // Calculate the tiket number
+        const ticketNumber = Math.floor((Math.random()) * 9999) + 10000;
+
+        // Fill ticket information for printing
+        document.getElementById("passenger-name").innerHTML = userName;
+        document.getElementById("passenger-ticket-price").innerHTML = ticketPrice.toFixed(2) + "€";
+        document.getElementById("carriage-number").innerHTML = carriageNumber;
+        document.getElementById("passenger-ticket-num").innerHTML = "BF" + ticketNumber;
+        document.getElementById("passenger-ticket").classList.add("d-block");
+        document.getElementById("passenger-ticket").classList.remove("d-none");
+        
         // Return the final ticket price (print in console)
-        console.log(`Il prezzo del tuo biglietto è pari a: ${ticketPrice.toFixed(2)}€`)
+        // console.log(`Il prezzo del tuo biglietto è pari a: ${ticketPrice.toFixed(2)}€`)
     }
 
 })
@@ -49,5 +65,6 @@ clearFormButton.addEventListener('click', function(){
     document.getElementById('user-age').value = "";
     document.getElementById('travel-km').value = "";
 
+    // TODO Rinascondere il biglietto quando si preme "annulla"
 })
 
